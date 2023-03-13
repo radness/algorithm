@@ -61,6 +61,7 @@ public class BJ_1572_중앙값 {
 		bw.close();
 	}
 
+	// 중앙값 구하기
 	private static int query(int node, int l, int r, int target) {
 		if (l == r) {	//리프 도달
 			return l - 1;
@@ -76,6 +77,7 @@ public class BJ_1572_중앙값 {
 		}
 	}
 
+	// 트리 업데이트
 	private static void updateTree(int node, int value) {
 		tree[node] += value;
 
