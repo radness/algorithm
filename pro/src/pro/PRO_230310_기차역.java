@@ -2,6 +2,7 @@ package pro;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -27,7 +28,7 @@ public class PRO_230310_기차역 {
 	private static int sum;
 
 	public static void main(String[] args) throws IOException {
-//		System.setIn(new FileInputStream("src/pro/PRO_230310_기차역"));
+		System.setIn(new FileInputStream("src/pro/PRO_230310_기차역"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringBuilder sb = new StringBuilder();
@@ -81,7 +82,7 @@ public class PRO_230310_기차역 {
 				}
 			}
 
-			sb.append("#" + T + " " + sum + "\n");
+			sb.append("#" + tc + " " + sum + "\n");
 		}
 
 		bw.write(sb.toString());
