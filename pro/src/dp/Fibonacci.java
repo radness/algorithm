@@ -19,12 +19,12 @@ public class Fibonacci {
 		startTime = System.currentTimeMillis();
 		System.out.println(topDown(N));
 		endTime = System.currentTimeMillis();
-		System.out.println("營敝 衛除(ms) : " + (endTime - startTime));
+		System.out.println("Top Down 衛除(ms) : " + (endTime - startTime));
 		
 		startTime = System.currentTimeMillis();
 		System.out.println(bottomUp(N));
 		endTime = System.currentTimeMillis();
-		System.out.println("營敝 衛除(ms) : " + (endTime - startTime));
+		System.out.println("Bottom Up 衛除(ms) : " + (endTime - startTime));
 		
 	}
 
