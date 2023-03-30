@@ -19,7 +19,7 @@ public class PRO_230310_기차역2 {
 
 	static List<Train>[] LIST; // i번 도시에서(각각의 도시에서) 출발하는 기차 목록
 	static long[] MIN_COST; // 수도에서 i번 도시까지 이동하는 최소 비용
-	static int[] PRE_STATIONS; // 수도에서 i번 도시가지 최소비용으로 이동할 때 직전 역 번호
+	static int[] PRE_STATIONS; // 수도에서 i번 도시까지 최소비용으로 이동할 때 직전 역 번호
 	static boolean[] IS_CLOSED; // i번 역의 폐쇄 여부
 
 	public static void main(String[] args) throws IOException {

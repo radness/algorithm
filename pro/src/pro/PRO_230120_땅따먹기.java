@@ -17,7 +17,7 @@ public class PRO_230120_¶¥µû¸Ô±â {
 
 	public static void main(String[] args) throws Exception {
 		Long start = System.currentTimeMillis();
-		System.setIn(new FileInputStream(new File("src/pro/PRO_230120_¶¥µû¸Ô±â")));
+//		System.setIn(new FileInputStream(new File("src/pro/PRO_230120_¶¥µû¸Ô±â")));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
 		for (int testcase = 1; testcase <= T; testcase++) {
