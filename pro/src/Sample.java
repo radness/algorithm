@@ -7,9 +7,12 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Sample {
+	private static int N;
+	
 	public static void main(String[] args) throws Exception {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st;
 
 		int N = Integer.parseInt(br.readLine());
@@ -27,7 +30,6 @@ public class Sample {
 
 //		System.out.println(sb.toString());
 
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		bw.write(sb.toString());
 //		bw.flush();
 		bw.close();
