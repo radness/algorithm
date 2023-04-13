@@ -1,0 +1,77 @@
+자료구조 / 알고리즘
+
+필수 자료 구조
+Direct Address Table (ex: 배열)
+Ordered (TreeSet / TreeMap / Priority Queue)
+Hash (HashSet / HashMap)
+
+권장
+1. Adv(Graph, DFS, Flood Fill, Backtracking)
+2. Dijkstra
+3. Binary Search
+4. Union-Find
+
+추가
+1. Linked List
+2. Segment Tree
+
+모든 알고리즘 문제 -> 구현 => 자료구조 설계
+완성이 되지않은  API를 구현
+
+대표 문제 유형
+1. 빠른 검색
+수 많은 데이터가 주어지고, 빠르게 검색하는 문제(시간초과 유발)
+고객관리, 주어지는 메서드(함수) 구현
+
+- void add(id, name, age)
+	- id, name, age 가 주어진다.
+	- 최대 1,000,000 번 호출될 수 있다.
+	  -> add함수에서 1000번 반복문 구현했다.
+	  -> 1,000,000,000 즉 10억건 반복 -> 시간초과	
+- String find(id)
+	- id가 주어지면 이름을 리턴
+	- 최대 1,000,000 번 호출될 수 있다.
+- int best(targetName)
+	- targetName 이름을 가진 사람들 중, 나이가 가장 많은 사람을 찾아 리턴
+	- 최대 1,000 번 호출될 수 있다.
+
+2. 시뮬레이션
+시간이 지난 후, 상태를 리턴
+ex: 지렁이의 역사, 주어지는 메서드를 구현
+- 각 API 호출 수의 합은 100,000이다.
+
+- void add(id, life)
+	- 지렁이 id와 수명 life가 주어진다.
+- int span(year)
+	- 현재 시간으로 부터 year 년이 흐른다.
+	- 살아있는 지렁이 수를 리턴한다.
+- int getLeftLife(id)
+	- 특정 id를 가진 지렁이의 남은 수명을 리턴한다.
+	- 만약 이미 수명이 끝났다면 -1을 리턴한다.
+
+3. Quiz Game
+힌트가 제공되는  API를 사용하여 정답을 유추
+ex: 숫자 맞추기게임, 퀴즈의 정답(sol_num)을 맞추는 sendResult API 구현
+- 사용 가능한 API: String tryBall(int sum)
+	- 이 메서드는 num값이, 정답 값인 sol_num값과 일치하는지 알려준다.
+	- 제공되는 tryBal API를 호출하여 sol_num값을 무엇인지 알아낸다(최대 호출 가능 수 10회)
+- tryBall 메서드 리턴값
+	- num < sol_num 일 떄 리턴값: "DOWN"
+	- num = sol_num 일 떄 리턴값: "UP"
+	- num > sol_num 일 떄 리턴값: "GOOD"
+- 구현해야하는 API: int sendResult()
+	- tryBall API를 사용해서 찾아낸 정닶을 리턴한다.
+	- API 호출 횟수 : 1회
+	
+반드시 익혀야 할 Collection
+기본 문법
+	- ArrayList
+	- ArrayDeque
+	- PriorityQueue
+ordered
+	- TreeSet
+	- TreeMap
+Hash
+	- HashSet
+	- HashMap
+	
