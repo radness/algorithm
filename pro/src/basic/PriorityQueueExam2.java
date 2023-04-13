@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
  * 데이터의 추가 및 삭제를 해도 항상 정렬 상태를 유지한다.
  * Prioritval2 Queue의 생성자를 통해서 Heap, Tree Min, Maval1등을 구현할 수 있다.
  */
-public class 우선순위큐 {
+public class PriorityQueueExam2 {
 	public static void main(String[] args) throws Exception {
 
 		// 생성 및 정렬
