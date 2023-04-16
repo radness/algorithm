@@ -4,9 +4,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /* Flood Fill
+ * 주어진 시작점으로부터 연결된 영역들을 찾는 알고리즘
+ * 다차원 배열의 어떤 칸과 연결된 영역을 찾는 알고리즘
+ * DFS 알고리즘을 이용하여 재귀 함수를 통해 구현하거나 BFS 알고리즘을 이용하여 Queue로 구현한다.
  * 
- * 
- *
  */
 public class BFSExam_FloodFill {
 	public static void main(String[] args) throws Exception {
