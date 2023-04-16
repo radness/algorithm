@@ -1,4 +1,4 @@
-package acmicpc;
+package acmicpc.dfs_bfs;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
