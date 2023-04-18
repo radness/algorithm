@@ -1,4 +1,4 @@
-package basic.priority_queue;
+package basic.queue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
