@@ -1,8 +1,10 @@
 package basic.map;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.PriorityQueue;
 
 /* HashMap VS TreeMap
  * HashMap : key 순서가 중요하지 않을 때 사용
@@ -59,13 +61,15 @@ public class HashMapExam {
 		hmapStr.replace(2, "BBB", "ASD");
 		System.out.println(hmapStr);
 		System.out.println(hmapStr.get(2));
-		
+
+		// Collection을 포함한 HashMap
 		// HashMpa + ArrayList
 		// hmap2에는 alist의 참조값을 저장한다.
 		// alist에 값을 추가하면 hmap2에서도 값을 읽을 수 있다.
 		HashMap<Integer, ArrayList<String>> hmap2 = new HashMap<>();
 		ArrayList<String> alist = new ArrayList<>();
 		hmap2.put(1, alist);
+		hmap2.put(2, new ArrayList<>());
 		
 		alist.add("AAA");
 		alist.add("BBB");
@@ -75,6 +79,45 @@ public class HashMapExam {
 			System.out.print(str + " ");
 		}
 		
+		System.out.println();
+		
+		// HashMap + PriorityQueue
+		// hmap에는 pqc의 참조값을 저장한다.
+		// pq에 값을 추가하면 hmap에서도 값을 읽을 수 있다.
+		HashMap<Integer, PriorityQueue<Integer>> hmap3 = new HashMap<>();
+		
+		PriorityQueue<Integer> pq = new PriorityQueue<>();
+		hmap3.put(1, pq);
+		
+		pq.add(1);
+		pq.add(3);
+		pq.add(5);
+		pq.add(7);
+			
+		System.out.print("hmap3의 1번째 배열의 값 : ");
+		while (hmap3.get(1).isEmpty() == false) {
+			System.out.print(hmap3.get(1).poll() + " ");
+		}
+
+		// 큰 수 대로 정렬해서 넣기 : Comparator.reverseOrder()
+		HashMap<Integer, PriorityQueue<Integer>> hmap4 = new HashMap<>();
+		PriorityQueue<Integer> pq4 = new PriorityQueue<>();
+		hmap4.put(1, new PriorityQueue<>(Comparator.reverseOrder())); 
+		
+		hmap4.get(1).add(1);
+		hmap4.get(1).add(3);
+		hmap4.get(1).add(5);
+		hmap4.get(1).add(7);
+		
+		
+		// hmap3와 구성된 item은 같다
+		System.out.println();
+		System.out.print("hmap4의 1번째 배열의 값 : ");
+		while (hmap4.get(1).isEmpty() == false) {
+			System.out.print(hmap4.get(1).poll() + " ");
+		}
+		
+		/* PQ, HashMap, TreeMap */
 		
 	}
 
