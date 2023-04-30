@@ -31,6 +31,5 @@ public class HashSetExam {
 		
 		System.out.println("1이 존재하는가? " + hset.contains(1));
 		
-		
 	}
 }

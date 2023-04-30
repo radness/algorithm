@@ -1,9 +1,13 @@
-package basic;
+package basic.set;
 
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
+/* TreeSet
+ * ³ª¿­µÇ´Â ¼ø¼­¸¦ ÁöÁ¤ÇØÁÖ°í ½Í´Ù¸é TreeSet »ç¿ëÇÑ´Ù.
+ * 
+ * */
 public class TreeSetExam {
     public static void main(String[] args) throws Exception {
         TreeSet<String> ts = new TreeSet<>();
@@ -11,18 +15,15 @@ public class TreeSetExam {
         ts.add("core");
         ts.add("banana");
 
-        // ì •ë ¬ëœ ìˆœì„œë¡œ ì¶œë ¥
         for(String s : ts)
             System.out.println(s);
 
         HashSet<String> hs = new HashSet<>(ts);
 
-        // ì •ë ¬ë˜ì§€ ì•Šì€ ì±„ ì¶œë ¥
         for(String s : hs)
             System.out.println(s);
 
 
-        // Forë¬¸ë‚´ì—ì„œ ìš”ì†Œ ì‚­ì œ
         Iterator<String> iterator = hs.iterator();
         while (iterator.hasNext()) {
             String element = iterator.next();
@@ -31,10 +32,32 @@ public class TreeSetExam {
             }
         }
 
-        // ì‚­ì œ ê²°ê³¼ ì¶œë ¥
         for(String s : hs)
             System.out.println(s);
 
 
+    }
+    
+    // OrderedÀÎ TreeSetÀº »ç¿ëÀÚ Á¤ÀÇ compare ±¸ÇöÀÌ °¡´ÉÇÏ´Ù.
+    static class Node implements Comparable<Node> {
+    	int n;
+    	
+    	/* this
+    	 * ÀÚ½ÅÀ» ÂüÁ¶ÇÏ´Â ÂüÁ¶º¯¼ö
+    	 * class  ¸Ş¼Òµå ³»¿¡¼­¸¸ »ç¿ë °¡´ÉÇÏ´Ù.
+    	 * »ı¼ºÀÚ¿¡¼­ ´Ù¸¥ »ı¼ºÀÚ È£ÃâÇÒ ¶§ »ç¿ë
+    	 * ´Ù¸¥ »ı¼ºÇÏ È£Ãâ ½Ã Ã¹ ÁÙ¿¡¼­¸¸ »ç¿ëÀÌ °¡´ÉÇÏ´Ù.
+    	 * */
+    	public Node(int n) {
+    		// Àü´ŞÀÎÀÚ ºÎºĞÀÌ °´Ã¼ ¼Ó¼º°ú ÀÌ¸§ÀÌ µ¿ÀÏÇÑ °æ¿ì
+    		// this¸¦ »ç¿ëÇÏ¿© ±¸ºĞÇØ¾ß ÇÑ´Ù.
+    		this.n = n;
+    	}
+    	
+		@Override
+		public int compareTo(Node other) {
+			return Integer.compare(this.n, other.n);
+		}
+    	
     }
 }
