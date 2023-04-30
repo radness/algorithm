@@ -17,6 +17,7 @@ public class ArrayListExam {
 	public static void main(String[] args) throws Exception {
 		ArrayList<Integer> arr = new ArrayList<>();
 		
+		// O(1) : 맨 뒤에 추가하는 것은 O(1) 나머지(맨앞, 중간)은 O(N)
 		arr.add(1);
 		arr.add(3);
 		arr.add(5);
@@ -56,6 +57,8 @@ public class ArrayListExam {
 		System.out.println();
 		
 		// 역순 제거
+		// 맨 마지막 element 삭제 시 -> O(1)
+		// 중간 element 삭제 시 -> O(N)
 		// ArrayList 항목들으 역순으로 하나씩 출력 후 제거
 		while (!arr.isEmpty()) {
 			int lastIdx = arr.size() - 1;
