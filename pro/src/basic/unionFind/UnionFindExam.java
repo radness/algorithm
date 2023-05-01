@@ -5,7 +5,7 @@ public class UnionFindExam {
 		new UnionFindExam().solution();
 	}
 
-	private void solution() {
+	void solution() {
 		UnionFind uf = new UnionFind();
 
 		uf.union('D', 'A');
