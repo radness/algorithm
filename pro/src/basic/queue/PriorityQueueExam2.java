@@ -3,13 +3,13 @@ package basic.queue;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-/* Prioritval2 Queue(우선순위 큐)
+/* Priority Queue(우선순위 큐)
  * 일반적인 큐는 데이터를 일시적으로 쌓아두기 위한 자료구조로
  * 스택과는 다르게 FIFO(First In First Out)의 구조를 가진다.(먼저 들어온 값이 먼저 나가는 구조)
  * 우선순위 큐는 우선순위를 먼저 결정하고 그 우선순위가 높은 값이 먼저 나가는 구조.
  * 우선순위 큐는 힙을 이용하여 구현하는것이 일반적이다.
  * 데이터의 추가 및 삭제를 해도 항상 정렬 상태를 유지한다.
- * Prioritval2 Queue의 생성자를 통해서 Heap, Tree Min, Maval1등을 구현할 수 있다.
+ * Priority Queue의 생성자를 통해서 Heap, Tree Min, Max등을 구현할 수 있다.
  */
 public class PriorityQueueExam2 {
 	public static void main(String[] args) throws Exception {
