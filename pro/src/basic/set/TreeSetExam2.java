@@ -66,5 +66,48 @@ public class TreeSetExam2 {
 			System.out.println(iter.next());	// 출력
 		}
 
+		TreeSet<Person> person = new TreeSet<>();
+		
+		person.add(new Person("김XX", 30));
+		person.add(new Person("이XX", 20));
+		person.add(new Person("박XX", 43));
+		
+		Iterator<Person> iter2 = person.iterator();
+		
+		// 나이 순으로 정렬된 person 을 출력
+		while (iter2.hasNext()) {
+			Person p = iter2.next();
+			System.out.println("이름 : " + p.name + " 나이 : " + p.age);
+		}
+	}
+	
+	// Person 객체 생성 후 나이순으로 정렬(오름차순)
+	static class Person implements Comparable<Person> {
+		private String name; 
+		private int age;
+		
+		public Person(String name, int age) {
+			this.name = name;
+			this.age = age;
+		}
+		
+		@Override
+		public int compareTo(Person other) {
+			if (this.age < other.age)
+				return -1;
+			else if (this.age > other.age)
+				return 1;
+
+			return 0;
+		}
+		
+		public String getName() {
+			return name;
+		}
+		
+		public int getAge() {
+			return age;
+		}
+		
 	}
 }
