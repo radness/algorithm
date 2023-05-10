@@ -1,8 +1,4 @@
-<<<<<<< master
-package dynamicProgramming;
-=======
 package dp;
->>>>>>> b351bfa 경로 정리
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

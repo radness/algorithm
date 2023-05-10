@@ -6,7 +6,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BJ_7576_토마토 {
+// 토마토
+public class BJ_7576 {
 	private static int N;
 	private static int M;
 	private static int[][] visit; // 방문

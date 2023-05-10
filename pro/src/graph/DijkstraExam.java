@@ -26,7 +26,7 @@ import java.util.StringTokenizer;
 출력
 0 8 18 13 0 3
 */
-public class 다익스트라1 {
+public class DijkstraExam {
 	static List<Node>[] graph;
 
 	public static void main(String[] args) throws Exception {

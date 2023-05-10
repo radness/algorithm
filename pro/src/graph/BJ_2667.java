@@ -6,7 +6,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BJ_2667_단지번호붙이기 {
+// 단지번호 붙이기
+public class BJ_2667 {
 	private static int N;
 	private static char[][] map = new char[25][25];
 

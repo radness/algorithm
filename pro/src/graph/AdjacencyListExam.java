@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 배열 + 리스트
-public class 인접리스트1 {
+public class AdjacencyListExam {
 	public static void main(String[] args) {
 		int [][] edges = new int[][] {
 			{1, 2}, {1, 3}, {1, 4}, {2, 3}, {2, 5}, {4, 5}
