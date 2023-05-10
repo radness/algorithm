@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
  * 점화식 : D[i] = D[i-1] + D[i-2]
  * (i >= 2)
  * */
-public class BJ_2748 {
+public class BJ_2748_피보나치수2 {
 	private static int N;
 	private static int[] arr;
 

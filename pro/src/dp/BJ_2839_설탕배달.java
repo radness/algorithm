@@ -1,10 +1,9 @@
-package dp;
+package dynamicProgramming;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-// º≥≈¡ πË¥ﬁ
-public class BJ_2839 {
+public class BJ_2839_º≥≈¡πË¥ﬁ {
 	static int N;
 	static int ans;
 

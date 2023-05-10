@@ -1,10 +1,9 @@
-package dp;
+package dynamicProgramming;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-// 피보나치 수
-public class BJ_2747 {
+public class BJ_2747_피보나치수 {
 	static long count = 0;
 	static long[] fibo;
 

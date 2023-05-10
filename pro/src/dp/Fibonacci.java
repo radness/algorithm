@@ -1,4 +1,4 @@
-package dp;
+package dynamicProgramming;
 
 public class Fibonacci {
 	static int[] topDown_memoization;

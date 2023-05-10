@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BJ_7576_2 {
+public class BJ_7576_≈‰∏∂≈‰2 {
 	static int N, M;
 	static int[][] map;
 	static int[][] visit;

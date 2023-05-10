@@ -3,7 +3,7 @@ package graph;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdjacencyListExam2 {
+public class 인접리스트2 {
 
 	public static void main(String[] args) {
 		int [][] edges = new int[][] {
