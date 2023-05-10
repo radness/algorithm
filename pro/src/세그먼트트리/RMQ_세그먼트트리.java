@@ -1,4 +1,4 @@
-package tree;
+package 세그먼트트리;
 
 public class RMQ_세그먼트트리 {
 	static int[] tree;

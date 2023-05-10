@@ -1,4 +1,4 @@
-package graph;
+package basic;
 
 /* 자료구조
  * 배열 : 연속된 데이터 저장

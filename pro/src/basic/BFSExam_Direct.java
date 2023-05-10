@@ -1,4 +1,4 @@
-package bfs;
+package basic;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

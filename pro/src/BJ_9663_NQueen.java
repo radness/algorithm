@@ -1,4 +1,3 @@
-package acmicpc;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -51,7 +50,7 @@ public class BJ_9663_NQueen {
 		for (int i = 0; i < col; i++) {
 			if (arr[i] == arr[col]) {
 				return false;
-			} else if (Math.abs(col - i) == Math.abs(arr[col] - arr[i])) {	// ??각선
+			} else if (Math.abs(col - i) == Math.abs(arr[col] - arr[i])) {	// 대각선
 				return false;
 			}
 		}
