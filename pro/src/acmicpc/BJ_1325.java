@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class BJ_1325_효율적인해킹 {
+// 효율적인 해킹
+public class BJ_1325 {
 	private static int N; // 노드
 	private static int M; // 리프
 	private static int[] visited; // 방문 배열

@@ -8,6 +8,7 @@ import java.util.Queue;
  * 다차원 배열의 어떤 칸과 연결된 영역을 찾는 알고리즘
  * DFS 알고리즘을 이용하여 재귀 함수를 통해 구현하거나 BFS 알고리즘을 이용하여 Queue로 구현한다.
  * 
+ * BFS + Direct Search
  */
 public class BFSExam_FloodFill {
 	public static void main(String[] args) throws Exception {
@@ -21,9 +22,11 @@ public class BFSExam_FloodFill {
 		int[] dX = { 0, 0, -1, 1 };
 		
 		Queue<Node> q = new LinkedList<>();
+		// 시작점 넣기
 		q.add(new Node(0, 0));
 		
 		while (!q.isEmpty()) {
+			// 하나씩 뺀다
 			Node now = q.poll();
 			
 			for (int i = 0; i < 4; i++) {
@@ -33,9 +36,10 @@ public class BFSExam_FloodFill {
 				if (ny < 0 || nx < 0 || ny >= 3 || nx >= 3)
 					continue;
 				if (arr[ny][nx] != 0)
-					continue;
+					continue;	// 이미 꽃이 핀 후보지는 제외한다.
 				
 				arr[ny][nx] = arr[now.y][now.x] + 1;
+				// 다음 후보지 등록
 				q.add(new Node(ny, nx));
 			}
 		}

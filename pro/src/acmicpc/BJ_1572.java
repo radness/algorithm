@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class BJ_1572_Áß¾Ó°ª {
+public class BJ_1572 {
 	static int N;
 	static int K;
 	static int[] input;
