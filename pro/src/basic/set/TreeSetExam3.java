@@ -28,6 +28,10 @@ public class TreeSetExam3 {
 		tsetNode.add(new Node(15));
 		tsetNode.add(new Node(999));
 		
+		// PriorityQueue처럼 사용할 수 있다.
+		// -> 속도는 PQ가 빠르다.
+		// PQ : 우선순위가 가장 높은것, 빠른것 을 뽑아낼 때
+		// TreeSet : 중간 우선순위 등수를 뽑아낼 때
 		System.out.print("Comparable구현을 통한 TeeSet 역순 정렬 : ");
 		
 		while (!tsetNode.isEmpty()) {
