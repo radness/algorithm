@@ -1,8 +1,4 @@
-<<<<<<< master
-package dynamicProgramming;
-=======
 package dp;
->>>>>>> b351bfa 경로 정리
 
 public class Fibonacci {
 	static int[] topDown_memoization;
