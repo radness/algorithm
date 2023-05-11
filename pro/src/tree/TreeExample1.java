@@ -1,4 +1,4 @@
-package Æ®¸®;
+package tree;
 
 public class TreeExample1 {
 	private Node newNode;

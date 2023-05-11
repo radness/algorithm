@@ -1,6 +1,6 @@
-package 세그먼트트리;
+package tree;
 
-public class RMQ_세그먼트트리 {
+public class SegmentTreeExam {
 	static int[] tree;
 	static int[] a;
 	static int[] D;
