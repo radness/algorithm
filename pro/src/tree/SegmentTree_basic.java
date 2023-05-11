@@ -48,5 +48,30 @@ public class SegmentTree_basic {
 			return tree[node] = init(array, node * 2, start, (start + end) / 2)
 					+ init(array, node * +1, (start + end) / 2 + 1, end);
 		}
+
+		public void update(int node, int start, int end, int idx, long diff) {
+			if (idx < start || end < idx)
+				return;
+
+			tree[node] += diff;
+
+			if (start != end) {
+				update(node * 2, start, (start + end) / 2, idx, diff);
+				update(node * 2 + 1, (start + end) / 2, end, idx, diff);
+			}
+		}
+
+		public long sum(int node, int start, int end, int left, int right) {
+			if (left > end || right < start) {
+				return 0;
+			}
+
+			if (left <= start && end <= right) {
+				return tree[node];
+			}
+
+			return sum(node * 2, start, (start + end) / 2, left, right)
+					+ sum(node * 2 + 1, (start + end) / 2 + 1, end, left, right);
+		}
 	}
 }
