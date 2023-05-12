@@ -1,9 +1,9 @@
 package basic.recursive;
 
-public class RecursiveExam2 {
+public class RecursiveExam_used {
 	static int[] path = new int[10];
 	static int[] used = new int[10];
-	
+
 	public static void main(String[] args) {
 		run(0);
 	}
@@ -20,7 +20,8 @@ public class RecursiveExam2 {
 		}
 
 		for (int i = 0; i < 3; i++) {
-			if (used[i] == 1) continue;
+			if (used[i] == 1)
+				continue;
 			used[i] = 1;
 			path[num] = i + 1;
 			run(num + 1);
