@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 /* HashMap VS TreeMap
- * HashMap : key 순서가 중요하지 않을 때 사용
+ * HashMap : key 순서가 중요하지 않을 때 사용(TreeMap 비해 빠른 속도)
  * TreeMap : key 순서가 중요할 때 사용
  * 
  * HashSet은 HashMap으로 구현되어 있기 때문에 HashMap을 사용한다.
@@ -24,11 +24,16 @@ public class HashMapExam {
 		hmap.put("AAA", true);
 		hmap.put("BBB", true);
 		hmap.put("CCC", false);
-
+		hmap.put("DDD", true);
+		
+		System.out.println("hmap 사이즈 : " + hmap.size());
+		
 		for (Map.Entry<String, Boolean> str : hmap.entrySet()) {
-
+			
 		}
-
+		
+		// 결론  : Set대신 Map을 사용.
+		
 		// Class를 Value로 사용하기
 		// put, get - O(1)
 		HashMap<Integer, Node> hmapNode = new HashMap<>();
@@ -46,8 +51,8 @@ public class HashMapExam {
 		hmapStr.put(2, "BBB");
 		hmapStr.put(3, "CCC");
 
-		System.out.println(hmapStr.containsKey(2));
-		System.out.println(hmapStr.containsValue("AAA"));
+		System.out.println("containsKey : " + hmapStr.containsKey(2));
+		System.out.println("containsValue : " + hmapStr.containsValue("AAA"));
 
 		// Remove - O(1)
 		// remove(key) : 노드 삭제 - O(1)
@@ -63,7 +68,7 @@ public class HashMapExam {
 		System.out.println(hmapStr.get(2));
 
 		// Collection을 포함한 HashMap
-		// HashMpa + ArrayList
+		// HashMap + ArrayList
 		// hmap2에는 alist의 참조값을 저장한다.
 		// alist에 값을 추가하면 hmap2에서도 값을 읽을 수 있다.
 		HashMap<Integer, ArrayList<String>> hmap2 = new HashMap<>();
@@ -102,7 +107,7 @@ public class HashMapExam {
 		// 큰 수 대로 정렬해서 넣기 : Comparator.reverseOrder()
 		HashMap<Integer, PriorityQueue<Integer>> hmap4 = new HashMap<>();
 		PriorityQueue<Integer> pq4 = new PriorityQueue<>();
-		hmap4.put(1, new PriorityQueue<>(Comparator.reverseOrder())); 
+		hmap4.put(1, new PriorityQueue<>(Comparator.reverseOrder())); // 큰수부터 출력(내림차순)
 		
 		hmap4.get(1).add(1);
 		hmap4.get(1).add(3);
@@ -118,6 +123,9 @@ public class HashMapExam {
 		}
 		
 		/* PQ, HashMap, TreeMap */
+		
+		/*** ID값 부여 후 DAT 사용하기 ***/
+		
 		
 	}
 
