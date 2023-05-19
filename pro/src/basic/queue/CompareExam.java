@@ -30,6 +30,7 @@ public class CompareExam {
 
 		Arrays.sort(arr, Comparator.reverseOrder()); // 역순 정렬
 
+		System.out.println("Arrays sort 역순 정렬");
 		for (int num2 : arr) {
 			System.out.print(num2 + " ");
 		}
@@ -38,6 +39,7 @@ public class CompareExam {
 		
 		ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(1, 2, 53, 2, 30, 3));
 
+		System.out.println("Collections sort 역순 정렬");
 //		Collections.sort(arr2);
 		Collections.sort(arr2, Comparator.reverseOrder());
 		

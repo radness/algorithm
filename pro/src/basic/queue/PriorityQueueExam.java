@@ -63,7 +63,36 @@ public class PriorityQueueExam {
 			Item item = queue.poll();	// or queue.remove()
 			System.out.println("val1 : " + item.val1 + " val2: " + item.val2);
 		}
+		
+		PriorityQueue<Node> pq2 = new PriorityQueue<>(new Comparator<Node>() {
 
+			@Override
+			public int compare(Node node1, Node node2) {
+				return node1.start - node2.start;
+			}
+			
+		});
+		pq2.add(new Node(1, 10));
+		pq2.add(new Node(10, 8));
+		pq2.add(new Node(2, 23));
+		pq2.add(new Node(30, 33));
+		
+		System.out.println("start기준으로 정렬하기");
+		while (!pq2.isEmpty()) {
+			Node node = pq2.poll();
+			System.out.println("start : " + node.start + " end : " + node.end);
+		}
+		
+		PriorityQueue<Integer> pq3 = new PriorityQueue<>(Comparator.reverseOrder());
+		pq3.add(3);
+		pq3.add(123);
+		pq3.add(8);
+		pq3.add(22);
+		
+		System.out.print("pq3 역순 정렬 : ");
+		while (!pq3.isEmpty()) {
+			System.out.print(pq3.poll() + " ");
+		}
 	}
 
 	private static class Item {
@@ -73,6 +102,16 @@ public class PriorityQueueExam {
 		Item(int val1, int val2) {
 			this.val1 = val1;
 			this.val2 = val2;
+		}
+	}
+	
+	static class Node {
+		int start;
+		int end;
+	
+		public Node(int start, int end) {
+			this.start = start;
+			this.end = end;
 		}
 	}
 }

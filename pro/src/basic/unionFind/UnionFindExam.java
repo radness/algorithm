@@ -1,5 +1,29 @@
 package basic.unionFind;
 
+/* 자료구조
+ * => 데이터를 저장하고 관리하는 방법
+ * 배열 : 값을 저장, 순차적으로 저장
+ * 링크드리스트 : 값을 저장, 순차적으로 저장
+ * 그래프 : 값을 저장, 노드 관계 정보드 함께 저장
+ * Union-Find
+ * 값을 저장, 노드 끼리 그룹 정보도 함꼐 저장
+ * 
+ * 각 그룹에는 대표 노드가 존재한다.
+ * 대표노드는 하나의 그룹을 상징한다.
+ * 
+ * 그룹 합병
+ * 대표가 아니더라도 그룹원 한 사람이, 다른 그룹원 사람과 union이 되면
+ * 그룹 자체가 union이 된다.
+ * 
+ * [중요] Boss 선정 규칙
+ * Union(A, B)를 수행하면 아래 순서대로 진행된다.
+ * 1. A의 보스와 B의 보스를 각각 찾아낸다.
+ * 2. B의 보스가 A의 보스 밑으로 들어가고, A는 통합된 조직의 Boss 이다.
+ * 
+ * Union-Find는 tree로 관리된다.
+ *   
+ * 
+ * */
 public class UnionFindExam {
 	public static void main(String[] args) throws Exception {
 		new UnionFindExam().solution();

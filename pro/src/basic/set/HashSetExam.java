@@ -22,6 +22,7 @@ public class HashSetExam {
 		hset.add(1);
 		hset.add(-10);
 		hset.add(40);
+		hset.add(null);
 		
 		System.out.println(hset);
 		

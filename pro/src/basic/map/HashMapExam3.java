@@ -11,7 +11,9 @@ public class HashMapExam3 {
 	public static void main(String[] args) {
 		Solution sol = new Solution();
 		
-		
+		sol.addPersion("raeni", 34);
+
+		System.out.println(sol.getMaxAge("raeni"));
 	}
 	
 	static class Solution {
