@@ -10,6 +10,7 @@ import java.util.StringTokenizer;
  * 병합정렬(Merge Sort)의 conquer영역 기초
  * 
  * 대표예제 : 백준 2003 (수들의 합2)
+ * https://www.acmicpc.net/problem/2003
  * 시간복잡도 : O(N)
  * 
  * */
@@ -65,6 +66,7 @@ public class BJ_2003 {
 }
 /*
 입력
+N M
 4 2
 1 1 1 1
 
