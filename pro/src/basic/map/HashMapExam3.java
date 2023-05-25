@@ -11,52 +11,51 @@ public class HashMapExam3 {
 	public static void main(String[] args) {
 		Solution sol = new Solution();
 		
+		sol.addPersion("raeni", 32);
 		sol.addPersion("raeni", 34);
+		sol.addPersion("raeni", 28);
 
-		System.out.println(sol.getMaxAge("raeni"));
+		System.out.println("Max Age : " + sol.getMaxAge("raeni"));
+		System.out.println("Min Age : " + sol.getMinAge("raeni"));
 	}
 	
 	static class Solution {
-		HashMap<String, Integer> StrToId = new HashMap<>();
-		int id;
 		
-		PriorityQueue<Integer>[] dataMaxPQ = new PriorityQueue[1000];
-		PriorityQueue<Integer>[] dataMinPQ = new PriorityQueue[1000];
+		HashMap<String, Integer> StrToId = new HashMap<>();
+		
+		int id;
+
+		PriorityQueue<Integer>[] datMaxPQ = new PriorityQueue[1000];
+		PriorityQueue<Integer>[] datMinPQ = new PriorityQueue[1000];
 		
 		void addPersion(String name, int age) {
+			
 			if (!StrToId.containsKey(name)) {
-				StrToId.put(name, ++id);	// 1번부터 값 부여
-				// 1번부터 id에 생성 후 추가
-				dataMaxPQ[id] = new PriorityQueue<>(Comparator.reverseOrder());
-				dataMinPQ[id] = new PriorityQueue<>();
+				StrToId.put(name, ++id);
+				
+				datMaxPQ[id] = new PriorityQueue<>(Comparator.reverseOrder());
+				datMinPQ[id] = new PriorityQueue<>();
 			}
 			
-			id = StrToId.get(name);
+			int id = StrToId.get(name);
 			
-			dataMaxPQ[id].add(age);
-			dataMaxPQ[id].add(age);
+			datMaxPQ[id].add(age);
+			datMinPQ[id].add(age);
 		}
 		
 		int getMaxAge(String name) {
-			// 같지만 속도가 getOrDefault가 더 빠르다.
-			// getOrDefault : 있으면 값을 리턴하고 없으면 -1을 default로 리턴한다.
-//			if (StrToId.containsKey(name)) {	// 두번 읽는다.
-//				id = StrToId.get(name);
-//			}
-			// getOrDefault : 
 			int id = StrToId.getOrDefault(name, -1);
 			if (id != -1)
-				return dataMaxPQ[id].poll();
-			
+				return datMaxPQ[id].poll();
 			return 0;
 		}
 		
 		int getMinAge(String name) {
 			int id = StrToId.getOrDefault(name, -1);
 			if (id != -1)
-				return dataMaxPQ[id].poll();
-			
+				return datMinPQ[id].poll();
 			return 0;
 		}
+		
 	}
 }

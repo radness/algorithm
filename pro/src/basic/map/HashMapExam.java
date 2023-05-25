@@ -125,7 +125,7 @@ public class HashMapExam {
 		/* PQ, HashMap, TreeMap */
 		
 		/*** ID값 부여 후 DAT 사용하기 ***/
-		
+		// 속도 : DAT > Hash (1.5배 빠름)
 		
 	}
 
