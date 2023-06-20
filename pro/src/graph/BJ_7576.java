@@ -1,4 +1,4 @@
-package graph;
+package 그래프;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,8 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-// 토마토
-public class BJ_7576 {
+public class BJ_7576_토마토 {
 	private static int N;
 	private static int M;
 	private static int[][] visit; // 방문
@@ -81,14 +80,14 @@ public class BJ_7576 {
 			}
 		}
 	}
-	
-	static class Node {
-		int x;
-		int y;
+}
 
-		public Node(int x, int y) {
-			this.x = x;
-			this.y = y;
-		}
+class Node {
+	int x;
+	int y;
+
+	public Node(int x, int y) {
+		this.x = x;
+		this.y = y;
 	}
 }

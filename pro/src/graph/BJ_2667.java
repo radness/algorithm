@@ -1,4 +1,4 @@
-package graph;
+package 그래프;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,8 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// 단지번호 붙이기
-public class BJ_2667 {
+public class BJ_2667_단지번호붙이기 {
 	private static int N;
 	private static char[][] map = new char[25][25];
 

@@ -1,12 +1,11 @@
-package graph;
+package 그래프;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// 토마토2
-public class BJ_7576_2 {
+public class BJ_7576_토마토2 {
 	static int N, M;
 	static int[][] map;
 	static int[][] visit;

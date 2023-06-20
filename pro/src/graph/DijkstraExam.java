@@ -1,4 +1,4 @@
-package graph;
+package 그래프;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -26,7 +26,7 @@ import java.util.StringTokenizer;
 출력
 0 8 18 13 0 3
 */
-public class DijkstraExam {
+public class 다익스트라1 {
 	static List<Node>[] graph;
 
 	public static void main(String[] args) throws Exception {
