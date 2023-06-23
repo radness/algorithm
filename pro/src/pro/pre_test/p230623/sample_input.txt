@@ -1,0 +1,13 @@
+11
+depend B C
+depend D B
+depend G E
+depend G F
+depend A E
+depend A G
+depend A F
+setup C
+setup G
+setup A
+depend F D
+setup A
