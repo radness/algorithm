@@ -1,4 +1,4 @@
-package 프로원정대.day1.DAY1_02;
+package expedition.day1.DAY1_02;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
+// 블랙리스트
 public class Main {
 
 	static int[][] map;

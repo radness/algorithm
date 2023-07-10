@@ -1,10 +1,11 @@
-package 프로원정대.day1.DAY1_01;
+package expedition.day1.DAY1_01;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
+// 입력과 출력
 public class Main {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
