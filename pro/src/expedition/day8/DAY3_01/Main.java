@@ -64,3 +64,17 @@ public class Main {
 		return PARENT[node] = Find(PARENT[node]);
 	}
 }
+
+/*
+input
+4 5
+1 1 2
+1 3 4
+0 2 4
+1 2 4
+0 1 2 
+
+output
+NO
+YES
+*/
