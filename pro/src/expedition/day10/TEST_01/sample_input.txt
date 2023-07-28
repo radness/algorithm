@@ -1,0 +1,41 @@
+40
+create 1 Warrior MINCO
+create 1 Magician MMMMM 
+create 1 Rogue TT12345
+create 1 Warrior MINCO
+create 2 Warrior NOJIN
+create 1 Archer whoisthis
+topServerPlayer 1
+jobPatch Rogue 10
+topServerPlayer 1
+play 1 MINCO 3 450
+play 1 NOJIN 3 650
+play 2 NOJIN 3 650
+topPlayer
+play 1 TT12345 3 600
+topPlayer
+topServerPlayer 2
+topServerPlayer 1
+jobPatch Warrior 10
+topPlayer
+addItem 10
+addItem 200
+buyItem 2 NOJIN
+buyItem 2 MINCO
+topPlayer
+topServerPlayer 1
+buyItem 1 MINCO
+topServerPlayer 1
+buyItem 1 MINCO
+buyItem 1 MINCO
+buyItem 1 MINCO
+buyItem 1 MINCO
+buyItem 1 MINCO
+topServerPlayer 1
+buyItem 1 TT12345
+topPlayer
+topServerPlayer 1
+topServerPlayer 2
+buyItem 2 NOJIN
+topPlayer
+buyItem 2 NOJIN
