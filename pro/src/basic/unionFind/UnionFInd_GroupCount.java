@@ -1,10 +1,10 @@
 package basic.unionFind;
 
-/* ±×·ìÀÇ °¹¼ö °ü¸®
+/* ê·¸ë£¹ì˜ ê°œìˆ˜ ê´€ë¦¬
  * 
- * ±×·ìÀÇ °¹¼ö °ü¸® ¹æ¹ı
- * dat ¹è¿­(isNew)
- * groupCnt º¯¼ö
+ * ê·¸ë£¹ì˜ ê°œìˆ˜ ê´€ë¦¬ ë°©ë²•
+ * dat ë°°ì—´(isNew)
+ * groupCnt ë³€ìˆ˜
 */
 public class UnionFInd_GroupCount {
 	public static void main(String[] args) {
@@ -30,10 +30,10 @@ public class UnionFInd_GroupCount {
 	static class UnionFind {
 		char[] arr = new char[200];
 		int[] isNew = new int[200];
-		int groupCnt = 0; // ±×·ì °¹¼ö
+		int groupCnt = 0;
 
 		public UnionFind() {
-			// ÀÚ±â ÀÚ½ÅÀ» °¡¸£Å°µµ·Ï ÃÊ±â ¼¼ÆÃ
+			// ìê¸° ìì‹ ì„ ê°€ë¥´í‚¤ë„ë¡ ì´ˆê¸° ì…‹íŒ…
 			for (int i = 0; i < 200; i++) {
 				arr[i] = (char) i;
 			}
@@ -54,13 +54,13 @@ public class UnionFInd_GroupCount {
 			if (isNew[t2] == 0)
 				groupCnt += ++isNew[t2];
 
-			// °°Àº º¸½º¶ó¸é °°Àº ±×·ìÀÌ¹Ç·Î ±×·ìÀ» ÁöÀ» ÇÊ¿ä°¡ ¾ø´Ù.
+			// ê°™ì€ ë³´ìŠ¤ë¼ë©´ ê°™ì€ ê·¸ë£¹ì´ë¯€ë¡œ ê·¸ë£¹ì„ ì§€ì„ í•„ìš” ì—†ì´ return
 			if (t1 == t2)
 				return;
 
-			arr[t2] = t1; // t2´Â t1 ¹ØÆ®·Î µé¾î°£´Ù.
+			arr[t2] = t1; // t2ëŠ” t1 ë°‘ìœ¼ë¡œ ë“¤ì–´ê°„ë‹¤(t2ì˜ ë³´ìŠ¤ëŠ” t1)
 
-			groupCnt -= 1; // ±×·ìÀÌ ÇÏ³ª ÁÙ¾ú´Ù.
+			groupCnt -= 1; // ê·¸ë£¹ì´ í•˜ë‚˜ ì¤„ì–´ë“ ë‹¤.
 		}
 
 	}
