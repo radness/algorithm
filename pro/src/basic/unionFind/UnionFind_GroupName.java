@@ -1,6 +1,6 @@
 package basic.unionFind;
 
-// ±×·ì ÀÌ¸§ °ü¸®
+// ê·¸ë£¹ ì´ë¦„
 public class UnionFind_GroupName {
 	public static void main(String[] args) {
 		new UnionFind_GroupName().solution();
@@ -10,17 +10,17 @@ public class UnionFind_GroupName {
 	private void solution() {
 		UnionFind uf = new UnionFind();
 
-		uf.setGroupName('A', "¾çÆÄ");
-		uf.setGroupName('B', "´ëÆÄ");
-		uf.setGroupName('C', "ÂÊÆÄ");
-		uf.setGroupName('D', "½ÇÆÄ");
+		uf.setGroupName('A', "ï¿½ï¿½ï¿½ï¿½");
+		uf.setGroupName('B', "ï¿½ï¿½ï¿½ï¿½");
+		uf.setGroupName('C', "ï¿½ï¿½ï¿½ï¿½");
+		uf.setGroupName('D', "ï¿½ï¿½ï¿½ï¿½");
 
 		uf.union('A', 'B');
 		uf.union('C', 'D');
 		uf.union('E', 'F');
 		uf.union('B', 'F');
 
-		// F´Â Á¶Á÷ ÀÌ¸§ÀÌ ¾ø¾úÀ¸³ª union ÀÌÈÄ "¾çÆÄ" ¼Ò¼ÓÀÌ´Ù.
+		// Fï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ union ï¿½ï¿½ï¿½ï¿½ "ï¿½ï¿½ï¿½ï¿½" ï¿½Ò¼ï¿½ï¿½Ì´ï¿½.
 		System.out.println(uf.names[uf.find('F')]);
 	}
 
@@ -29,7 +29,7 @@ public class UnionFind_GroupName {
 		String[] names = new String[200];
 
 		public UnionFind() {
-			// ÀÚ±â ÀÚ½ÅÀ» °¡¸£Å°µµ·Ï ÃÊ±â ¼¼ÆÃ
+			// ï¿½Ú±ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½ï¿½
 			for (int i = 0; i < 200; i++) {
 				arr[i] = (char) i;
 			}
@@ -51,7 +51,7 @@ public class UnionFind_GroupName {
 			arr[t2] = t1;
 		}
 
-		// a¿¡ ¼ÓÇÑ ±×·ìÀÇ ÀÌ¸§Àº nameÀÌ´Ù.
+		// aï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ nameï¿½Ì´ï¿½.
 		void setGroupName(char a, String name) {
 			int target = find(a);
 			names[target] = name;
