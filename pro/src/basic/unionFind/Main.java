@@ -7,54 +7,45 @@ public class Main {
 
 	void solution() {
 		UnionFind uf = new UnionFind();
-
+		
 		uf.union('D', 'A');
 		uf.union('F', 'A');
 		uf.union('A', 'C');
-
-		if (uf.find('C') == uf.find('A')) {
-			System.out.println("°°Àº ±×·ì");
-		} else {
-			System.out.println("´Ù¸¥ ±×·ì");
-		}
+		
+		if (uf.find('C') == uf.find('A'))
+			System.out.println("ê°™ì€ ê·¸ë£¹");
+		else
+			System.out.println("ë‹¤ë¥¸ ê·¸ë£¹");
 	}
 
 }
 
 class UnionFind {
 	char[] arr = new char[200];
-
-	// »ı¼ºÀÚ
+	
+	// ìê¸° ìì‹ ì„ ê°€ë¥´í‚¤ë„ë¡ ì´ˆê¸° ì…‹íŒ…
 	public UnionFind() {
-		// ÀÚ±â ÀÚ½ÅÀ» °¡¸£Å°µµ·Ï ÃÊ±â ¼ÂÆÃ
 		for (int i = 0; i < 200; i++) {
 			arr[i] = (char) i;
 		}
 	}
+	
+	public void union(char a, char b) {
+		char pa = find(a);
+		char pb = find(b);
+		
+		if (pa == pb)
+			return;
+		
+		arr[pb] = pa;
+		
+	}
 
-	char find(char a) {
-		// ÃÖÁ¾º¸½º¸é return
+	public char find(char a) {
 		if (arr[a] == a)
 			return a;
-
-		// Àç±Í
-//		char boss = find(arr[a]);
-//		arr[a] = boss;
-//		return boss;
-
-		// °æ·Î ¾ĞÃà ÄÚµå
+		
 		return arr[a] = find(arr[a]);
 	}
-
-	void union(char a, char b) {
-		char t1 = find(a);
-		char t2 = find(b);
-
-		// °°Àº º¸½º¶ó¸é, °°Àº ±×·ìÀÌ¹Ç·Î ±×·ìÀ» Áö¿ï ÇÊ¿ä°¡ ¾ø´Ù.
-		if (t1 == t2)
-			return;
-
-		// t2´Â t1 ¹ØÀ¸·Î µé¾î°£´Ù.
-		arr[t2] = t1;
-	}
+	
 }
