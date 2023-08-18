@@ -1,6 +1,7 @@
 package expedition.day3.PRO_01;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
@@ -13,7 +14,7 @@ class Main {
 
 	private final static UserSolution usersolution = new UserSolution();
 
-	private final static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	private static BufferedReader br;
 
 	private static boolean run() throws Exception {
 		StringTokenizer st;
@@ -76,8 +77,10 @@ class Main {
 		int TC, MARK;
 
 		// System.setIn(new java.io.FileInputStream("res/sample_input.txt"));
-
-		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		System.setIn(new FileInputStream("src/expedition/day3/PRO_01/sample_input.txt"));
+		
+		br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
 
 		TC = Integer.parseInt(st.nextToken());
 		MARK = Integer.parseInt(st.nextToken());
